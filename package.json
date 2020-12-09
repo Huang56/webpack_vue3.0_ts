@@ -63,7 +63,6 @@
   "license": "MIT",
   "lint-staged": {
     "src/**/*.{js,ts,tsx,vue}": [
-      "eslint --fix",
       "git add ."
     ]
   }
