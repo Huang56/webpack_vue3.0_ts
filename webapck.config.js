@@ -35,6 +35,33 @@ module.exports = {
           },
         ],
       },
+
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              postcssOptions: {
+                path: 'postcss.config.js',
+              },
+            },
+          },
+          'less-loader',
+                // 在这里引入要增加的全局less文件
+                {
+                  loader: 'style-resources-loader',
+                  options: {
+                      patterns: path.resolve(__dirname, './src/assets/style/*.less'),
+                      injector: 'append'
+                  }
+              }
+        ]
+      },
+
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader'],
@@ -59,4 +86,5 @@ module.exports = {
     }),
     new VueLoaderPlugin()
   ],
+  
 }

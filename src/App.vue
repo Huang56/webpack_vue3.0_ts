@@ -1,6 +1,7 @@
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
+    <span class="test">test</span>
   </div>
 </template>
 
@@ -10,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang='less'>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
