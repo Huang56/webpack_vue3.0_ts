@@ -8,6 +8,8 @@
     "build": "webpack --mode=production --config webapck.config.js"
   },
   "dependencies": {
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3",
     "style-resources-loader": "^1.4.1",
     "vue": "^3.0.4"
   },
@@ -42,5 +44,16 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4",
     "webpack-parallel-uglify-plugin": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

@@ -85,6 +85,5 @@ module.exports = {
       inject: 'body',
     }),
     new VueLoaderPlugin()
-  ],
-  
+  ]
 }
