@@ -3,13 +3,13 @@ const VueLoaderPlugin = require('vue-loader-v16/dist/plugin.js').default
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/main.js'),
+  entry: path.resolve(__dirname, './src/main.ts'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.ts', '.js', '.json'],
   },
   module: {
     rules: [

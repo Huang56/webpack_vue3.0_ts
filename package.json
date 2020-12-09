@@ -4,9 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "devBuild": "webpack --config build/webpack.dev.js",
     "dev": "webpack-dev-server --config webapck.config.js",
-    "build": "webpack --config build/webpack.prod.js"
+    "build": "webpack --mode=production --config webapck.config.js"
   },
   "dependencies": {
     "vue": "^3.0.4"
@@ -32,6 +31,15 @@
     "webpack-cli": "^3",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4",
-    "webpack-parallel-uglify-plugin": "^2.0.0"
+    "webpack-parallel-uglify-plugin": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0",
+    "typescript": "~3.9.3"
   }
 }
