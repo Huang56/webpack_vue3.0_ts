@@ -1,17 +1,28 @@
 <template>
   <div>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <span class="test">test</span>
+    <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
 <script lang="ts">
-export default {
-  name: "App",
+import { defineComponent} from 'vue';
+import HelloWorld from './components/HelloWorld.vue';
+
+
+export default defineComponent ({
+    components: {
+    HelloWorld,
+  },
 }
+
+
+
+
+)
 </script>
 
-<style lang='less'>
+<style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
